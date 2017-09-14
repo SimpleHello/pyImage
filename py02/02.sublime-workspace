@@ -27,33 +27,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "cn/cn01.py",
-			"settings":
-			{
-				"buffer_size": 2221,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "cn/cn02.py",
-			"settings":
-			{
-				"buffer_size": 1498,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "import numpy as np  \nimport cv2  \nimport cv2.cv as cv  \nfrom video import create_capture  \nfrom common import clock, draw_str  \n  \nhelp_message = '''  \nUSAGE: facedetect.py [--cascade <cascade_fn>] [--nested-cascade <cascade_fn>] [<video_source>]  \n'''  \n  \ndef detect(img, cascade):  \n    rects = cascade.detectMultiScale(img, scaleFactor=1.3, minNeighbors=4, minSize=(30, 30), flags = cv.CV_HAAR_SCALE_IMAGE)  \n    if len(rects) == 0:  \n        return []  \n    rects[:,2:] += rects[:,:2]  \n    return rects  \n  \ndef draw_rects(img, rects, color):  \n    for x1, y1, x2, y2 in rects:  \n        cv2.rectangle(img, (x1, y1), (x2, y2), color, 2)  \n  \nif __name__ == '__main__':  \n    import sys, getopt  \n    print help_message  \n  \n    args, video_src = getopt.getopt(sys.argv[1:], '', ['cascade=', 'nested-cascade='])  \n    try: video_src = video_src[0]  \n    except: video_src = 0  \n    args = dict(args)  \n    cascade_fn = args.get('--cascade', \"../../data/haarcascades/haarcascade_frontalface_alt.xml\")  \n    #nested_fn  = args.get('--nested-cascade', \"../../data/haarcascades/haarcascade_eye.xml\")  \n  \n    cascade = cv2.CascadeClassifier(cascade_fn)  \n    #nested = cv2.CascadeClassifier(nested_fn)  \n  \n    cam = create_capture(video_src, fallback='synth:bg=../cpp/lena.jpg:noise=0.05')  \n  \n    while True:  \n        ret, img = cam.read()  \n        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  \n        gray = cv2.equalizeHist(gray)  \n  \n        t = clock()  \n        rects = detect(gray, cascade)  \n        vis = img.copy()  \n        draw_rects(vis, rects, (0, 255, 0))  \n          \n        for x1, y1, x2, y2 in rects:  \n         #   roi = gray[y1:y2, x1:x2]  \n         #   vis_roi = vis[y1:y2, x1:x2]  \n            #print(x1,y1,x2,y2)  \n            crop = vis[y1:y2,x1:x2]  \n            cv2.imshow('crop',crop)  \n          #  subrects = detect(roi.copy(), nested)  \n          #  draw_rects(vis_roi, subrects, (255, 0, 0))  \n        dt = clock() - t  \n          \n        draw_str(vis, (20, 20), 'time: %.1f ms' % (dt*1000))  \n        cv2.imshow('facedetect', vis)  \n          \n        if 0xFF & cv2.waitKey(5) == 27:  \n            break  \n    cv2.destroyAllWindows()  ",
-			"settings":
-			{
-				"buffer_size": 2177,
-				"line_ending": "Windows",
-				"name": "import numpy as np"
-			}
-		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
@@ -102,16 +75,44 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 150.0,
-		"last_filter": "Package Control: ins",
+		"height": 392.0,
+		"last_filter": "git s",
 		"selected_items":
 		[
 			[
-				"Package Control: ins",
-				"Package Control: Install Package"
+				"git s",
+				"Git: Status"
+			],
+			[
+				"git p",
+				"Git: Pull"
+			],
+			[
+				"git ad",
+				"Git: Add Remote"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git:in",
+				"Git: Init"
+			],
+			[
+				"git:sta",
+				"Git: Status"
+			],
+			[
+				"gits",
+				"Git: Status"
 			],
 			[
 				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
 				"Package Control: Install Package"
 			],
 			[
@@ -123,13 +124,14 @@
 				"Install Package Control"
 			]
 		],
-		"width": 400.0
+		"width": 464.0
 	},
 	"console":
 	{
 		"height": 153.0,
 		"history":
 		[
+			"gs"
 		]
 	},
 	"distraction_free":
@@ -145,12 +147,17 @@
 	[
 		"/D/sublimework/py01",
 		"/D/sublimework/py02",
-		"/D/sublimework/py02/cn",
+		"/D/sublimework/py02/cn/11_face",
 		"/D/sublimework/py03"
 	],
 	"file_history":
 	[
+		"/D/sublimework/py02/cn/1127.jpg",
+		"/D/sublimework/py02/cn/cn02.py",
 		"/D/sublimework/py02/cn/cn01.py",
+		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/SublimeGit/SublimeGit.sublime-settings",
+		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/SublimeGit/Default.sublime-keymap",
+		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/User/SublimeGit.sublime-settings",
 		"/D/sublimework/py02/cn/cn01",
 		"/D/sublimework/py01/test05.py",
 		"/D/sublimework/py02/cn/__init__.py",
@@ -197,6 +204,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"process",
 			"11",
 			"citl",
 			"error",
@@ -239,353 +247,13 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "cn/cn01.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2221,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2191,
-								2191
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "cn/cn02.py",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1498,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								284,
-								329
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										365,
-										366
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/double_quote.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										283,
-										284
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2177,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1466,
-								1466
-							]
-						],
-						"settings":
-						{
-							"auto_name": "import numpy as np",
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 550.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -634,6 +302,22 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.git-commit":
+	{
+		"height": 488.0
+	},
+	"output.git-init":
+	{
+		"height": 124.0
+	},
+	"output.git-pull":
+	{
+		"height": 124.0
+	},
+	"output.git-push":
+	{
+		"height": 124.0
 	},
 	"pinned_build_system": "",
 	"project": "",
