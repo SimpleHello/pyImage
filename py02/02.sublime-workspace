@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"get",
-				"getYin\tfunction"
+				"jq",
+				"jquery"
+			],
+			[
+				"tes",
+				"testtx"
 			],
 			[
 				"in",
-				"input\tfunction"
+				"input\tTag"
+			],
+			[
+				"he",
+				"min-height"
+			],
+			[
+				"get",
+				"getYin\tfunction"
 			],
 			[
 				"i",
@@ -76,9 +88,17 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "git s",
+		"last_filter": "git",
 		"selected_items":
 		[
+			[
+				"git",
+				"Git: Pull"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
 			[
 				"git s",
 				"Git: Status"
@@ -112,10 +132,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"Package Control: ins",
-				"Package Control: Install Package"
-			],
-			[
 				"list",
 				"Package Control: List Packages"
 			],
@@ -143,60 +159,150 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/D/sublimework/py01",
-		"/D/sublimework/py02",
-		"/D/sublimework/py02/cn/11_face",
-		"/D/sublimework/py03"
-	],
 	"file_history":
 	[
-		"/D/sublimework/py02/cn/1127.jpg",
-		"/D/sublimework/py02/cn/cn02.py",
-		"/D/sublimework/py02/cn/cn01.py",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/SublimeGit/SublimeGit.sublime-settings",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/SublimeGit/Default.sublime-keymap",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/User/SublimeGit.sublime-settings",
-		"/D/sublimework/py02/cn/cn01",
-		"/D/sublimework/py01/test05.py",
-		"/D/sublimework/py02/cn/__init__.py",
-		"/D/sublimework/py01/test03.py",
-		"/D/sublimework/py02/02.py",
-		"/D/sublimework/py03/11.json",
-		"/D/sublimework/py02/1.py",
-		"/D/sublimework/py03/Alarmlink.json",
-		"/D/sublimework/py01/test01.py",
-		"/D/sublimework/py01/test02.py",
-		"/D/sublimework/py04/gold",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
-		"/D/sublimework/py01/pa01.py",
-		"/D/sublimework/py01/Config.py",
-		"/D/sublimework/py01/pa02.py",
-		"/D/sublimework/py01/mysqlDb.py",
-		"/D/sublimework/py01/niubi.py",
-		"/D/sublimework/py01/Config.conf",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/Python PEP8 Autoformat/pep8_autoformat.sublime-settings",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/User/pep8_autoformat.sublime-settings",
-		"/D/sublimework/py01/test04.py",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/Python PEP8 Autoformat/Default (Windows).sublime-keymap",
-		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
-		"/D/sublimework/11.py"
+		"/D/gitsself/GoodBai-all/GoodBai-View/build/webpack.base.conf.js",
+		"/D/gitsself/GoodBai-all/GoodBai-View/src/page/buss/new.vue",
+		"/D/gitsself/GoodBai-all/GoodBai-View/src/page/test/zTreeTest01.vue",
+		"/E/demoList/vue/vue-ztree-2.0-master/README.md",
+		"/E/demoList/vue/vue-ztree-2.0-master/src/components/vue-ztree.vue",
+		"/D/gitsself/GoodBai-all/GoodBai-View/src/main.js",
+		"/D/gitsself/GoodBai-all/GoodBai-View/src/page/buss/old.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/components/user/pwd.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/components/user/user.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/components/List/components/List/index.vue",
+		"/E/demoList/vue/vue2-tree-master/src/index.js",
+		"/E/demoList/vue/vue2-tree-master/src/main.js",
+		"/E/demoList/vue/vue2-tree-master/src/App.vue",
+		"/E/demoList/vue/vue2-tree-master/src/Tree0.vue",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/dist/index.html",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/app/Articles/Form/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/common/header.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/common/slider.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/obDepartment/inoAnalysis.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/obDepartment/putOnRecord.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/router/menu.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/views/Index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/views/List.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/components/user/add.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-example-master/vue-example-master/src/views/module/role.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-example-master/vue-example-master/src/views/module/basic.vue",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/src/components/vue-ztree.vue",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/src/App.vue",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/src/main.js",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/vue-ztree-2.0.png",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/README.md",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/package.json",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/src/views/main.vue",
+		"/E/download/vue-ztree-2.0-master/vue-ztree-2.0-master/src/router/index.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/components/user/edit.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/components/main.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/components/user/add.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/components/user/user.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/router/routes/logout.js",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/router/routes/login.js",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/router/routes/home.js",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/app/Home/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/app/Layout/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/app/Layout/components/Sidebar/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/app/Articles/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/app/Articles/List/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/app/Layout/components/Body/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/app/Layout/components/Header/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/router/routes/articles.js",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/router/index.js",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/models/actions/login.js",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/components/I/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/components/Editor/utils/consts.js",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/App.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/index.html",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/main.js",
+		"/E/安装软件以及安装包以及文档/project-demo/ivew/iview后台管理系统001/iview-master/src/router/routes/notFound.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/components/goods/add.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/main.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/store/index.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/views/UserInfo.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-example-master/vue-example-master/src/router.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/components/user/edit.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivewAndVue-master/src/router.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivewAndVue-master/src/views/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/package.json",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/components/user/pwd.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/store/getters.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/views/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/App.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/m.less",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/store/index.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/_ajax/product_setting.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/_ajax/product_tour.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/store/modules/admin_auth.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/ajax.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/package.json",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/util.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/config/urls.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/config/contact.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/config/index.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/main.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/content.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/home.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/module/eventBus.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/module/leftNav.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/config/routes.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/config/routes-vaccine.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/404.vue",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/main.js",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/router/index.js",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/components/Home.vue",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/components/Hello.vue",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/App.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/app.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/vendors.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/router.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/main.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/views/account/index.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/console.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/layout_copy.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/home.vue",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/components/Menu12.vue",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/router.js",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/views/account/index.vue",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/views/account/user_creator.vue",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/views/index.vue",
+		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/js/test.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/config/routes.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/json.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/store/modules/website.js",
+		"/D/123/iview_chojer-master/iview_chojer-master/readme.md",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/views/auth/login.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/nav_sub_menu.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/nav_top.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/nav_sub.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/components/auth/login_form.vue",
+		"/D/123/iview_chojer-master/iview_chojer-master/index.html",
+		"/D/123/iview_chojer-master/iview_chojer-master/src/store/modules/admin_menu.js",
+		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/main.js",
+		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/router/index.js",
+		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/components/Menu12.vue",
+		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/components/Menu11.vue",
+		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/App.vue",
+		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/components/Hello.vue",
+		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/components/Home.vue",
+		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/js/router.js"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"E:\\安装软件以及安装包以及文档\\project-demo\\vue\\vue-iview-master-master\\vue-iview-master-master\\src",
+			"D:\\123\\iview_chojer-master\\iview_chojer-master\\src",
+			"D:\\eselfwork\\GoodBai-all\\GoodBai-Shiro-View",
+			"D:\\123\\iview_chojer-master\\iview_chojer-master\\src"
 		]
 	},
 	"find_state":
@@ -204,6 +310,39 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"\n",
+			"webpack",
+			"ztree-item",
+			"JSON",
+			"lists",
+			"getUserList",
+			"dispatch",
+			"handleReset",
+			"listData",
+			"updateModel",
+			"doRemoveMsg",
+			"edit",
+			"user-info",
+			"handleReset",
+			"show",
+			".",
+			"curr-Template",
+			"website.json",
+			"v-if",
+			"menu_initial",
+			"post",
+			"/cms/index",
+			"API_URL",
+			"menu_initial",
+			"menu_open_sub",
+			"AdminMenu",
+			"onMenuSelected",
+			"isFullScreen",
+			".",
+			"发布文章",
+			"template",
+			"HEIGHT",
+			"ivu-row-flex",
 			"process",
 			"11",
 			"citl",
@@ -222,6 +361,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			""
 		],
 		"reverse": false,
 		"show_context": false,
@@ -229,28 +369,8 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"folders":
-	[
-		{
-			"path": "D:\\sublimework\\py01"
-		},
-		{
-			"path": "D:\\sublimework\\py02"
-		},
-		{
-			"path": "D:\\sublimework\\py03"
-		},
-		{
-			"path": "D:\\sublimework\\py04"
-		}
-	],
 	"groups":
 	[
-		{
-			"sheets":
-			[
-			]
-		},
 		{
 			"sheets":
 			[
@@ -274,18 +394,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -301,11 +414,11 @@
 	},
 	"output.find_results":
 	{
-		"height": 0.0
+		"height": 193.0
 	},
 	"output.git-commit":
 	{
-		"height": 488.0
+		"height": 261.0
 	},
 	"output.git-init":
 	{
@@ -361,7 +474,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 275.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
