@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"li",
+				"list\tstatement"
+			],
+			[
+				"p",
+				"print\tkeyword"
+			],
+			[
 				"jq",
 				"jquery"
 			],
@@ -30,15 +38,20 @@
 			[
 				"s",
 				"strip\tfunction"
-			],
-			[
-				"p",
-				"print\tkeyword"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "test/py01.py",
+			"settings":
+			{
+				"buffer_size": 318,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
@@ -159,8 +172,27 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/D/sublimework/py02",
+		"/D/sublimework/py02/test",
+		"/D/sublimework/py04"
+	],
 	"file_history":
 	[
+		"/D/sublimework/py02/1.py",
+		"/D/sublimework/py02/test/py02.py",
+		"/D/sublimework/py01/mysqlDb.py",
+		"/D/sublimework/py01/pa02.py",
+		"/D/sublimework/py01/pa01.py",
+		"/D/sublimework/py02/test/py01.py",
+		"/D/sublimework/py02/02.py",
+		"/D/sublimework/py03/11.json",
+		"/D/sublimework/py04/gold",
+		"/D/sublimework/py02/cn/cn01.py",
+		"/D/sublimework/py02/test/py01",
+		"/D/sublimework/py02/cn/13.jpg",
+		"/D/sublimework/py02/cn/11.jpg",
 		"/D/gitsself/GoodBai-all/GoodBai-View/build/webpack.base.conf.js",
 		"/D/gitsself/GoodBai-all/GoodBai-View/src/page/buss/new.vue",
 		"/D/gitsself/GoodBai-all/GoodBai-View/src/page/test/zTreeTest01.vue",
@@ -275,20 +307,7 @@
 		"/D/123/iview_chojer-master/iview_chojer-master/src/store/modules/website.js",
 		"/D/123/iview_chojer-master/iview_chojer-master/readme.md",
 		"/D/123/iview_chojer-master/iview_chojer-master/src/views/auth/login.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/nav_sub_menu.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/nav_top.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/nav_sub.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/components/auth/login_form.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/index.html",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/store/modules/admin_menu.js",
-		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/main.js",
-		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/router/index.js",
-		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/components/Menu12.vue",
-		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/components/Menu11.vue",
-		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/App.vue",
-		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/components/Hello.vue",
-		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/components/Home.vue",
-		"/D/eselfwork/GoodBai-all/GoodBai-Shiro-View/src/js/router.js"
+		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/nav_sub_menu.vue"
 	],
 	"find":
 	{
@@ -369,11 +388,140 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"folders":
+	[
+		{
+			"path": "D:\\sublimework\\py01"
+		},
+		{
+			"path": "D:\\sublimework\\py02"
+		},
+		{
+			"path": "D:\\sublimework\\py03"
+		},
+		{
+			"path": "D:\\sublimework\\py04"
+		}
+	],
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "test/py01.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -383,7 +531,7 @@
 	},
 	"input":
 	{
-		"height": 35.0
+		"height": 39.0
 	},
 	"layout":
 	{

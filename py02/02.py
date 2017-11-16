@@ -1,6 +1,6 @@
 # _*_ coding:utf-8 _*_
 import time
-
+import test.py01
 # 输出 乘法表
 def fig(n):
     for i in range(1, n + 1):
@@ -16,3 +16,4 @@ def pcs():
 
 print time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
 print pcs()
+print test.py01.meth01();
