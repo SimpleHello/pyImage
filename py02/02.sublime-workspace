@@ -44,10 +44,27 @@
 	"buffers":
 	[
 		{
-			"file": "test/py01.py",
+			"file": "/D/sublimework/py01/pa01.py",
 			"settings":
 			{
-				"buffer_size": 318,
+				"buffer_size": 884,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test/py02.py",
+			"settings":
+			{
+				"buffer_size": 451,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "02.py",
+			"settings":
+			{
+				"buffer_size": 365,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -100,10 +117,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "git",
+		"height": 137.0,
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"git",
 				"Git: Pull"
@@ -147,13 +168,9 @@
 			[
 				"list",
 				"Package Control: List Packages"
-			],
-			[
-				"install",
-				"Install Package Control"
 			]
 		],
-		"width": 464.0
+		"width": 476.0
 	},
 	"console":
 	{
@@ -176,18 +193,71 @@
 	[
 		"/D/sublimework/py02",
 		"/D/sublimework/py02/test",
-		"/D/sublimework/py04"
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/api"
 	],
 	"file_history":
 	[
-		"/D/sublimework/py02/1.py",
-		"/D/sublimework/py02/test/py02.py",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/App.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/main.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/store/index.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/components/Login/Login.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/api/common.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/api/instrance.js",
+		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/User/CTags.sublime-settings",
+		"/C/Users/John/AppData/Roaming/Sublime Text 3/Packages/CTags/CTags.sublime-settings",
+		"/D/gitsself/GoodBai-all/GoodBai-View/node_modules/express/lib/router/route.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/views/Article.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/router/routes.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/router/menu.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/router/index.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/Hello.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/views/List.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/views/Chart.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/module/leftNav.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/config/routes-vaccine.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/config/routes.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/config/index.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/config/api.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/module/eventBus.js",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/index.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/content.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/home.vue",
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/App.vue",
+		"/D/gitsself/GoodBai-all/GoodBai-View/src/page/system/role.vue",
+		"/D/sublimework/py03/11.json",
+		"/D/gitsself/GoodBai-all/GoodBai-View/src/page/system/roleTree.vue",
+		"/D/gitsself/GoodBai-all/GoodBai-View/src/page/system/addUser.vue",
+		"/E/pyRubish/python-master/datastruct/queue.py",
+		"/E/pyRubish/python-master/datastruct/binarysearch.py",
+		"/E/pyRubish/python-master/datastruct/graph.py",
+		"/E/pyRubish/python-master/unp/6/dump_info.py",
+		"/E/pyRubish/python-master/unp/6/dump_page.py",
+		"/E/pyRubish/python-master/datastruct/btree.py",
+		"/E/pyRubish/python-master/expand/1.py",
+		"/E/pyRubish/python-master/expand/2.py",
+		"/E/pyRubish/python-master/unp/1/download.py",
+		"/E/pyRubish/python-master/unp/2/connect.py",
+		"/E/pyRubish/python-master/unp/2/connect1.py",
+		"/E/pyRubish/python-master/unp/2/connect3.py",
+		"/E/pyRubish/python-master/unp/3/basicserver.py",
+		"/E/pyRubish/python-master/unp/3/echoclient.py",
+		"/E/pyRubish/python-master/unp/3/udpechoserver.py",
+		"/E/pyRubish/python-master/unp/1/gopherclient3.py",
+		"/E/pyRubish/python-master/unp/1/gopherclient.py",
+		"/D/sublimework/py02/test/__init__.py",
 		"/D/sublimework/py01/mysqlDb.py",
+		"/D/sublimework/py01/Config.py",
+		"/D/sublimework/py02/rubbish/xp.py",
+		"/E/pyRubish/python-master/博客/python写数据结构.pdf",
+		"/D/sublimework/py02/02.py",
+		"/D/sublimework/py02/test/py01.py",
+		"/D/sublimework/py02/test/py02.py",
+		"/D/sublimework/py02/1.py",
+		"/D/sublimework/py01/test02.py",
 		"/D/sublimework/py01/pa02.py",
 		"/D/sublimework/py01/pa01.py",
-		"/D/sublimework/py02/test/py01.py",
-		"/D/sublimework/py02/02.py",
-		"/D/sublimework/py03/11.json",
 		"/D/sublimework/py04/gold",
 		"/D/sublimework/py02/cn/cn01.py",
 		"/D/sublimework/py02/test/py01",
@@ -213,9 +283,7 @@
 		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/common/slider.vue",
 		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/obDepartment/inoAnalysis.vue",
 		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/obDepartment/putOnRecord.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/router/menu.js",
 		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/views/Index.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-admin-iview-master/vue-admin-artiely/src/components/views/List.vue",
 		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master-card/src/components/user/add.vue",
 		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-example-master/vue-example-master/src/views/module/role.vue",
 		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-example-master/vue-example-master/src/views/module/basic.vue",
@@ -258,56 +326,7 @@
 		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/components/user/edit.vue",
 		"/E/安装软件以及安装包以及文档/project-demo/vue/ivewAndVue-master/src/router.js",
 		"/E/安装软件以及安装包以及文档/project-demo/vue/ivewAndVue-master/src/views/index.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/package.json",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/components/user/pwd.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/ivew-admin-master/src/store/getters.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/views/index.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/App.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/m.less",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/store/index.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/_ajax/product_setting.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/_ajax/product_tour.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/store/modules/admin_auth.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/ajax.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/package.json",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/util.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/config/urls.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/config/contact.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/config/index.js",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/main.js",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/index.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/content.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/home.vue",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/module/eventBus.js",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/module/leftNav.js",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/config/routes.js",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/config/routes-vaccine.js",
-		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/src/page/404.vue",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/main.js",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/router/index.js",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/components/Home.vue",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/components/Hello.vue",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/App.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/app.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/vendors.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/router.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/main.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/views/account/index.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/console.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/layout_copy.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/home.vue",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/components/Menu12.vue",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/router.js",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/views/account/index.vue",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/views/account/user_creator.vue",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/views/index.vue",
-		"/D/gitsself/GoodBai/GoodBai-Shiro-View/src/js/test.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/config/routes.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/libs/json.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/store/modules/website.js",
-		"/D/123/iview_chojer-master/iview_chojer-master/readme.md",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/views/auth/login.vue",
-		"/D/123/iview_chojer-master/iview_chojer-master/src/components/layout/nav_sub_menu.vue"
+		"/E/安装软件以及安装包以及文档/project-demo/vue/vue-iview-master-master/vue-iview-master-master/package.json"
 	],
 	"find":
 	{
@@ -315,7 +334,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 104.0,
 		"where_history":
 		[
 			"E:\\安装软件以及安装包以及文档\\project-demo\\vue\\vue-iview-master-master\\vue-iview-master-master\\src",
@@ -329,6 +348,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Queue",
 			"\"\n",
 			"webpack",
 			"ztree-item",
@@ -400,46 +420,146 @@
 			"path": "D:\\sublimework\\py03"
 		},
 		{
-			"path": "D:\\sublimework\\py04"
+			"path": "D:\\gitsself\\GoodBai-all\\GoodBai-View"
+		},
+		{
+			"path": "E:\\安装软件以及安装包以及文档\\project-demo\\vue\\vue-iview-master-master\\vue-iview-master-master"
+		},
+		{
+			"path": "E:\\安装软件以及安装包以及文档\\project-demo\\vue\\vue-admin-iview-master\\vue-admin-artiely"
+		},
+		{
+			"path": "E:\\安装软件以及安装包以及文档\\project-demo\\vue\\ivew-admin-master-card"
 		}
 	],
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "test/py01.py",
+					"file": "/D/sublimework/py01/pa01.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 318,
+						"buffer_size": 884,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								317,
-								317
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete_triggers":
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "test/py02.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 451,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
+								23,
+								23
+							]
+						],
+						"settings":
+						{
 							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
 							"bracket_highlighter.locations":
 							{
 								"close":
@@ -457,41 +577,6 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -502,11 +587,46 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -520,6 +640,109 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "02.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								256
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
