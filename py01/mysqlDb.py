@@ -32,7 +32,6 @@ class Mysql(object):
     def __init__(self):
         # 数据库构造函数，从连接池中取出连接，并生成操作游标
         try:
-            print "12313>>>",Config.DBHOST
             self._conn = Mysql.__getConn()
             self._cursor = self._conn.cursor()
         except Exception, e:
