@@ -18,3 +18,4 @@ def getYin(n):
 			return getYin(n/i)
 			
 getYin(77)
+print "你好: %d-%d-%d " % (1,2,3)

@@ -165,15 +165,21 @@
 	},
 	"expanded_folders":
 	[
+		"/D/sublimework/py02",
+		"/D/sublimework/py04"
 	],
 	"file_history":
 	[
+		"/D/sublimework/py01/pa01.py",
+		"/D/sublimework/py01/ths.py",
+		"/D/sublimework/py01/mysqlDb.py",
+		"/D/sublimework/py01/test02.py",
+		"/D/sublimework/py01/pa02.py",
 		"/D/sublimework/Python-demo/expand/1.py",
 		"/D/sublimework/py04/gold",
 		"/D/sublimework/py01/Config.py",
 		"/D/sublimework/py03/11.json",
-		"/D/sublimework/py03/Alarmlink.json",
-		"/D/sublimework/py01/mysqlDb.py"
+		"/D/sublimework/py03/Alarmlink.json"
 	],
 	"find":
 	{
@@ -237,7 +243,7 @@
 	},
 	"input":
 	{
-		"height": 39.0
+		"height": 42.0
 	},
 	"layout":
 	{
@@ -264,7 +270,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 216.0
+		"height": 379.0
 	},
 	"output.find_results":
 	{
