@@ -3,6 +3,4 @@ import time
 import pandas as pa
 
 df = pa.read_csv('simple.csv')
-
-print df.head()
-print df.tail()
+print df.describe()
