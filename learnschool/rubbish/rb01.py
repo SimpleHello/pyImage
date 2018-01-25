@@ -1,4 +1,5 @@
 # -*- coding=utf-8 -*-
+# ! python2
 import random
 
 
@@ -11,4 +12,3 @@ def getByte(num):
 
 a = [1, 2, 3]
 b = [3, 4, 2]
-print a
