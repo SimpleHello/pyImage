@@ -1,8 +1,10 @@
 # coding=UTF-8
-from bs4 import BeautifulSoup
 import urllib2
-import re
-import mysqlDb
+
+from bs4 import BeautifulSoup
+
+from ZhiNengXuanGu import mysqlDb
+
 
 def getQsbaike():
 	url = 'http://news.10jqka.com.cn/realtimenews.html'

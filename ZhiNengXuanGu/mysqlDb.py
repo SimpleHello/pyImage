@@ -10,7 +10,7 @@ Created on 2016年11月5日
 """
 
 import MySQLdb
-import py01.Config
+import Config
 import sys
 from MySQLdb.cursors import DictCursor
 from DBUtils.PooledDB import PooledDB
@@ -47,13 +47,13 @@ class Mysql(object):
         """
         if Mysql.__pool is None:
             __pool = PooledDB(creator=MySQLdb, mincached=1, maxcached=20,
-                              host=py01.Config.DBHOST,
-                              port=py01.Config.DBPORT,
-                              user=py01.Config.DBUSER,
-                              passwd=py01.Config.DBPWD,
-                              db=py01.Config.DBNAME,
+                              host=Config.DBHOST,
+                              port=Config.DBPORT,
+                              user=Config.DBUSER,
+                              passwd=Config.DBPWD,
+                              db=Config.DBNAME,
                               use_unicode=False,
-                              charset=py01.Config.DBCHAR,
+                              charset=Config.DBCHAR,
                               cursorclass=DictCursor)
         return __pool.connection()
 
@@ -146,7 +146,11 @@ class Mysql(object):
                 if Strtmp == "":
                     Strtmp = "\"" + col + "\""
                 else:
-                    Strtmp += "," + "\"" + col + "\""
+                    if col.startswith('#'):
+                        col = col.replace('#','')
+                        Strtmp += "," + col
+                    else:
+                        Strtmp += "," + "\"" + col + "\""
             return Strtmp
 
     def _insertMany(self, table, attrs, values):
@@ -266,7 +270,7 @@ class Mysql(object):
         @return: result list/boolean 查询到的结果集
         """
 
-        count = self.__query(sql, parm)
+        count = self.__query(sql, param)
         if count > 0:
             result = self._cursor.fetchmany(num)
         else:
