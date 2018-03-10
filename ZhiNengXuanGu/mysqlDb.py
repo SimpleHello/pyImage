@@ -117,6 +117,7 @@ class Mysql(object):
         # values_sql = ['%s' for v in attrs]
         attrs_sql = '(' + ','.join(attrs) + ')'
         value_str = self._transferContent(value)
+        print value_str
         values_sql = ' values(' + value_str + ')'
         sql = 'insert into %s' % table
         sql = sql + attrs_sql + values_sql
@@ -144,7 +145,11 @@ class Mysql(object):
             Strtmp = ""
             for col in content:
                 if Strtmp == "":
-                    Strtmp = "\"" + col + "\""
+                    if col.startswith('#'):
+                        col = col.replace('#','')
+                        Strtmp += col
+                    else:
+                        Strtmp = "\"" + col + "\""
                 else:
                     if col.startswith('#'):
                         col = col.replace('#','')
