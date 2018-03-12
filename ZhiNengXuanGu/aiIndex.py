@@ -1,26 +1,55 @@
 # _*_ coding=UTF-8 _*_
 import urllib2
-
+import datetime
+import mysqlDb
 from bs4 import BeautifulSoup
+from selenium import webdriver
 
-from ZhiNengXuanGu import mysqlDb
 
-
-def getZhiNeng(ctime, type):
-    urlh = ctime.strftime('%Y%m%d')
+def getAiIndex():
+    ctime = datetime.datetime.now()
     ctime = ctime.strftime('%Y-%m-%d %H:%M')
+    url = 'http://stock.10jqka.com.cn/api/znxg/index.html'
+    print ctime, '> 开始解析:', url
+    try:
+        driver = webdriver.PhantomJS('/home/pythontool/phantomjs/bin/phantomjs')
+        driver.get('http://stock.10jqka.com.cn/api/znxg/index.html')  # 加载网页
+        response = driver.page_source  # 获取网页文本
+        content = response.decode('utf-8')
+        analyzeDate(content, ctime)
+        print ctime, '获取实时数据 操作完成'
+        driver.quit()
+    except urllib2.URLError, e:
+        if hasattr(e, "code"):
+            print e.code
+        if hasattr(e, "reason"):
+            print e.reason
+
+
+def getAiHistory(ctime):
+    urlh = ctime.strftime('%Y%m%d')
+    ctime = ctime.strftime('%Y-%m-%d')
     deleteName(ctime)
-    if type == 0:
-        urlh = 'index'
     url = 'http://stock.10jqka.com.cn/api/znxg/' + urlh + '.html'
     print ctime, '> 开始解析:', url
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
     headers = {'User-Agent': user_agent}
-    mysl = mysqlDb.Mysql()
     try:
         request = urllib2.Request(url, headers=headers)
         response = urllib2.urlopen(request)
         content = response.read().decode('utf-8')
+        analyzeDate(content, ctime)
+        print ctime,'获取 历史数据 操作完成'
+    except urllib2.URLError, e:
+        if hasattr(e, "code"):
+            print e.code
+        if hasattr(e, "reason"):
+            print e.reason
+
+
+def analyzeDate(content, ctime):
+    try:
+        mysl = mysqlDb.Mysql()
         soup = BeautifulSoup(content, 'html.parser')
         nodes = soup.find_all('div', class_="screen clearfix")
         for node in nodes:
@@ -35,7 +64,6 @@ def getZhiNeng(ctime, type):
 
             for pNode in pNodes:
                 detail = pNode.getText().strip()
-
                 if detail.startswith('【综合成功率】'):
                     succ = detail.replace("【综合成功率】", "").replace("\n", "").strip()
                     succ = succ[0:succ.index('%选出')]
@@ -47,9 +75,6 @@ def getZhiNeng(ctime, type):
                 trNodes = tableNode.find_all('tr')
                 for tr in trNodes:
                     aNode = tr.find('a')['data-code']
-                    eb = getByTime(ctime, aNode)
-                    if eb > 0:
-                        continue
                     trNodes = tr.find_all('td')
                     share = ''
                     num = 0
@@ -73,7 +98,6 @@ def getZhiNeng(ctime, type):
                     mysl._insert("Share_ths_ai_detail",
                                  ['name', 'share', 'code', 'beEnd', 'noStart', 'noEnd', 'amm', 'ctime'],
                                  [title, share, aNode, "#" + beEnd, "#" + noStart, "#" + noEnd, "#" + amm, ctime])
-        print '此操作完成'
     except urllib2.URLError, e:
         if hasattr(e, "code"):
             print e.code
@@ -95,10 +119,3 @@ def deleteName(time):
     mysl.delete(deleteSql01)
     return 1
 
-
-def getByTime(time, code):
-    mysl = mysqlDb.Mysql()
-    deleteSql01 = 'select count(1) as num  from Share_ths_ai_detail where code="' + code + '" and  DATE_FORMAT(ctime,"%Y-%m-%d")= str_to_date("' + time + '", "%Y-%m-%d")'
-    result = mysl.getOne(deleteSql01)
-    co = result['num']
-    return co
