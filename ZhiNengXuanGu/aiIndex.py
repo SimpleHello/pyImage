@@ -2,17 +2,20 @@
 import urllib2
 import datetime
 import mysqlDb
+import Config
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
 
 def getAiIndex():
     ctime = datetime.datetime.now()
-    ctime = ctime.strftime('%Y-%m-%d %H:%M')
     url = 'http://stock.10jqka.com.cn/api/znxg/index.html'
     print ctime, '> 开始解析:', url
     try:
-        driver = webdriver.PhantomJS('/home/pythontool/phantomjs/bin/phantomjs')
+        if Config.PhantomJS is None:
+            driver = webdriver.PhantomJS()
+        else:
+            driver = webdriver.PhantomJS(Config.PhantomJS)
         driver.get('http://stock.10jqka.com.cn/api/znxg/index.html')  # 加载网页
         response = driver.page_source  # 获取网页文本
         content = response.decode('utf-8')
@@ -28,10 +31,10 @@ def getAiIndex():
 
 def getAiHistory(ctime):
     urlh = ctime.strftime('%Y%m%d')
-    ctime = ctime.strftime('%Y-%m-%d')
-    deleteName(ctime)
+    startTime = ctime.strftime('%Y-%m-%d')
+    deleteName(startTime)
     url = 'http://stock.10jqka.com.cn/api/znxg/' + urlh + '.html'
-    print ctime, '> 开始解析:', url
+    print startTime, '> 开始解析:', url
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
     headers = {'User-Agent': user_agent}
     try:
@@ -39,7 +42,7 @@ def getAiHistory(ctime):
         response = urllib2.urlopen(request)
         content = response.read().decode('utf-8')
         analyzeDate(content, ctime)
-        print ctime,'获取 历史数据 操作完成'
+        print ctime, '获取 历史数据 操作完成'
     except urllib2.URLError, e:
         if hasattr(e, "code"):
             print e.code
@@ -49,6 +52,9 @@ def getAiHistory(ctime):
 
 def analyzeDate(content, ctime):
     try:
+        noHour = ctime.strftime('%H')
+        noDay = ctime.strftime('%Y%m%d')
+        startTime = ctime.strftime('%Y-%m-%d %H:%M')
         mysl = mysqlDb.Mysql()
         soup = BeautifulSoup(content, 'html.parser')
         nodes = soup.find_all('div', class_="screen clearfix")
@@ -67,7 +73,7 @@ def analyzeDate(content, ctime):
                 if detail.startswith('【综合成功率】'):
                     succ = detail.replace("【综合成功率】", "").replace("\n", "").strip()
                     succ = succ[0:succ.index('%选出')]
-                    mysl._insert("Share_ths_ai_succ", ["name", 'succ', 'ctime'], [title, "#" + succ, ctime])
+                    mysl._insert("Share_ths_ai_succ", ["name", 'succ', 'ctime'], [title, "#" + succ, startTime])
                 elif detail.startswith('【核心用法】') and col == 0:
                     mysl._insert("Share_ths_ai_info", ["name", 'detail'], [title, detail])
             tableNodes = node.find_all('table', class_="screen-table J_screenTable")
@@ -96,8 +102,10 @@ def analyzeDate(content, ctime):
                             beEnd = value
                         num += 1
                     mysl._insert("Share_ths_ai_detail",
-                                 ['name', 'share', 'code', 'beEnd', 'noStart', 'noEnd', 'amm', 'ctime'],
-                                 [title, share, aNode, "#" + beEnd, "#" + noStart, "#" + noEnd, "#" + amm, ctime])
+                                 ['name', 'share', 'code', 'beEnd', 'noStart', 'noEnd', 'amm', 'noHour',
+                                  'noDay', 'ctime'],
+                                 [title, share, aNode, "#" + beEnd, "#" + noStart, "#" + noEnd, "#" + amm, "#" + noHour,
+                                  "#" + noDay, startTime])
     except urllib2.URLError, e:
         if hasattr(e, "code"):
             print e.code
@@ -118,4 +126,3 @@ def deleteName(time):
     print deleteSql01
     mysl.delete(deleteSql01)
     return 1
-

@@ -13,3 +13,4 @@ def startIndex():
 job = BlockingScheduler()
 job.add_job(startIndex, 'cron', hour='8,9,12,14,15,18,20')
 job.start()
+#startIndex()

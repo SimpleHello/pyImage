@@ -8,3 +8,4 @@ DBUSER = "simple"
 DBPWD = "simple"
 DBNAME = "simple"
 DBCHAR = "utf8"
+PhantomJS = None
