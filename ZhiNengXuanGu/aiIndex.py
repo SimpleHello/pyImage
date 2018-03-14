@@ -101,11 +101,15 @@ def analyzeDate(content, ctime):
                         elif num == 4:
                             beEnd = value
                         num += 1
-                    mysl._insert("Share_ths_ai_detail",
-                                 ['name', 'share', 'code', 'beEnd', 'noStart', 'noEnd', 'amm', 'noHour',
-                                  'noDay', 'ctime'],
-                                 [title, share, aNode, "#" + beEnd, "#" + noStart, "#" + noEnd, "#" + amm, "#" + noHour,
-                                  "#" + noDay, startTime])
+                    if noStart > 500:
+                        print '异常数据:', share, aNode, noStart, '不做处理--'
+                    else:
+                        mysl._insert("Share_ths_ai_detail",
+                                     ['name', 'share', 'code', 'beEnd', 'noStart', 'noEnd', 'amm', 'noHour',
+                                      'noDay', 'ctime'],
+                                     [title, share, aNode, "#" + beEnd, "#" + noStart, "#" + noEnd, "#" + amm,
+                                      "#" + noHour,
+                                      "#" + noDay, startTime])
     except urllib2.URLError, e:
         if hasattr(e, "code"):
             print e.code
