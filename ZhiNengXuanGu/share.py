@@ -32,7 +32,7 @@ def saveHistory(queryTime):
 
         except BaseException, e:
             print e.message
-            print code, '出现异常 !!!'
+            print times, code, '出现异常 !!!'
 
 
 def getCode():
