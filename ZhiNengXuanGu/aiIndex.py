@@ -55,6 +55,8 @@ def analyzeDate(content, ctime):
         noHour = ctime.strftime('%H')
         noDay = ctime.strftime('%Y%m%d')
         startTime = ctime.strftime('%Y-%m-%d %H:%M')
+        # 对应 mon(0),tue(1),wed(2),thu(3),fri(4),sat(5),sun(6)
+        week = ctime.weekday()
         mysl = mysqlDb.Mysql()
         soup = BeautifulSoup(content, 'html.parser')
         nodes = soup.find_all('div', class_="screen clearfix")
@@ -107,10 +109,10 @@ def analyzeDate(content, ctime):
                     else:
                         mysl._insert("Share_ths_ai_detail",
                                      ['name', 'share', 'code', 'beEnd', 'noStart', 'noEnd', 'amm', 'noHour',
-                                      'noDay', 'deltype', 'addtype', 'ctime'],
+                                      'noDay', 'deltype', 'addtype', 'week'],
                                      [title, share, aNode, "#" + beEnd, "#" + noStart, "#" + noEnd, "#" + amm,
                                       "#" + noHour,
-                                      "#" + noDay, "#0", "#0", startTime])
+                                      "#" + noDay, "#0", "#0", "#" + str(week)])
     except urllib2.URLError, e:
         if hasattr(e, "code"):
             print e.code
