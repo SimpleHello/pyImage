@@ -26,7 +26,7 @@ def saveHistory(queryTime):
             if amm > 10:
                 amm = 10
             mysql._insert("Share_ths_ai_his",
-                          ['code', 'st', 'en', 'amm', 'day'],
+                          ['code', 'starts', 'ends', 'range', 'day'],
                           [code, "#" + str(st), "#" + str(en), "#" + str(amm), "#" + day])
             print 'code:', code, '保存成功'
 
