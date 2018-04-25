@@ -26,7 +26,7 @@ def saveHistory(queryTime):
             if amm > 10:
                 amm = 10
             mysql._insert("Share_ths_ai_his",
-                          ['code', 'starts', 'ends', 'range', 'day'],
+                          ['code', 'starts', 'ends', 'ranges', 'day'],
                           [code, "#" + str(st), "#" + str(en), "#" + str(amm), "#" + day])
             print 'code:', code, '保存成功'
 
@@ -41,11 +41,11 @@ def getCode():
 
 
 def addCodeExistThs(queryTime):
-    sql = 'INSERT INTO Share_ths(share,code) ' + \
-          'SELECT t1.share,t1.code ' + \
+    sql = 'INSERT INTO Share_ths(name,code) ' + \
+          'SELECT t1.name,t1.code ' + \
           'FROM ' + \
-          '(SELECT share,code FROM Share_ths_ai_detail WHERE noDay="' + queryTime + '" GROUP BY  share,code) t1 ' + \
-          'WHERE NOT EXISTS (SELECT * FROM Share_ths t2 WHERE t2.share=t1.share AND t2.code = t1.code)'
+          '(SELECT name,code FROM Share_ths_ai_detail WHERE day="' + queryTime + '" GROUP BY  name,code) t1 ' + \
+          'WHERE NOT EXISTS (SELECT * FROM Share_ths t2 WHERE t2.name=t1.name AND t2.code = t1.code)'
     mysql.getAll(sql)
 
 

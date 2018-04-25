@@ -108,7 +108,7 @@ def analyzeDate(content, ctime):
                         print '异常数据:', share, aNode, noStart, '不做处理--'
                     else:
                         mysl._insert("Share_ths_ai_detail",
-                                     ['type', 'name', 'code', 'lasts', 'opens', 'ends', 'range', 'hour',
+                                     ['type', 'name', 'code', 'lasts', 'opens', 'ends', 'ranges', 'hour',
                                       'day', 'pop', 'push', 'week'],
                                      [title, share, aNode, "#" + beEnd, "#" + noStart, "#" + noEnd, "#" + amm,
                                       "#" + noHour,
