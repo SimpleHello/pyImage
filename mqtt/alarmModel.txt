@@ -1,0 +1,1 @@
+{"devType" : 100,"alarmId" : "001001","coId" : "001001","enable" : True,"thresholdFlag" : 1, "threshold" : 1,"highRateT" :0,"highRateI" : 0,"delay" : 0,"recoverDelay" : 20}{"devType" : 140,"alarmId" : "004001","coId" : "101001","enable" : False,"thresholdFlag" : 1, "threshold" : 30,"highRateT" :0,"highRateI" : 0,"delay" : 600,"recoverDelay" : 0}
