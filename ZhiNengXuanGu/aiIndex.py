@@ -1,5 +1,5 @@
 # _*_ coding=UTF-8 _*_
-import urllib2
+import urllib.request
 import datetime
 import mysqlDb
 import Config
@@ -10,7 +10,7 @@ from selenium import webdriver
 def getAiIndex():
     ctime = datetime.datetime.now()
     url = 'http://stock.10jqka.com.cn/api/znxg/index.html'
-    print ctime, '> 开始解析:', url
+    print (ctime, '> 开始解析:', url)
     try:
         if Config.PhantomJS is None:
             driver = webdriver.PhantomJS()
@@ -20,13 +20,13 @@ def getAiIndex():
         response = driver.page_source  # 获取网页文本
         content = response.decode('utf-8')
         analyzeDate(content, ctime)
-        print ctime, '获取实时数据 操作完成'
+        print (ctime, '获取实时数据 操作完成')
         driver.quit()
-    except urllib2.URLError, e:
+    except urllib.error.URLError as e:
         if hasattr(e, "code"):
-            print e.code
+            print (e.code)
         if hasattr(e, "reason"):
-            print e.reason
+            print (e.reason)
 
 
 def getAiHistory(ctime):
@@ -34,20 +34,20 @@ def getAiHistory(ctime):
     startTime = ctime.strftime('%Y-%m-%d')
     deleteName(startTime)
     url = 'http://stock.10jqka.com.cn/api/znxg/' + urlh + '.html'
-    print startTime, '> 开始解析:', url
+    print (startTime, '> 开始解析:', url)
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
     headers = {'User-Agent': user_agent}
     try:
-        request = urllib2.Request(url, headers=headers)
-        response = urllib2.urlopen(request)
+        request = urllib.request.Request(url, headers=headers)
+        response = urllib.request.urlopen(request)
         content = response.read().decode('utf-8')
         analyzeDate(content, ctime)
-        print ctime, '获取 历史数据 操作完成'
-    except urllib2.URLError, e:
+        print (ctime, '获取 历史数据 操作完成')
+    except urllib.error.URLError as e:
         if hasattr(e, "code"):
-            print e.code
+            print (e.code)
         if hasattr(e, "reason"):
-            print e.reason
+            print (e.reason)
 
 
 def analyzeDate(content, ctime):
@@ -105,7 +105,7 @@ def analyzeDate(content, ctime):
                         num += 1
                     innoStart = float(noStart)
                     if innoStart > 500:
-                        print '异常数据:', share, aNode, noStart, '不做处理--'
+                        print ('异常数据:', share, aNode, noStart, '不做处理--')
                     else:
                         mysl._insert("Share_ths_ai_detail",
                                      ['type', 'name', 'code', 'lasts', 'opens', 'ends', 'ranges', 'hour',
@@ -113,11 +113,11 @@ def analyzeDate(content, ctime):
                                      [title, share, aNode, "#" + beEnd, "#" + noStart, "#" + noEnd, "#" + amm,
                                       "#" + noHour,
                                       "#" + noDay, "#0", "#0", "#" + str(week)])
-    except urllib2.URLError, e:
+    except urllib.error.URLError as e:
         if hasattr(e, "code"):
-            print e.code
+            print (e.code)
         if hasattr(e, "reason"):
-            print e.reason
+            print (e.reason)
 
 
 def getNameValue(name):
@@ -130,6 +130,6 @@ def getNameValue(name):
 def deleteName(time):
     mysl = mysqlDb.Mysql()
     deleteSql01 = 'delete from Share_ths_ai_succ where ctime= str_to_date("' + time + '", "%Y-%m-%d")'
-    print deleteSql01
+    print (deleteSql01)
     mysl.delete(deleteSql01)
     return 1

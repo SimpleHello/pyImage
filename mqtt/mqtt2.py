@@ -19,28 +19,26 @@ def on_message(client, userdata, msg):
         requests = threadpool.makeRequests(sendBakMessage, data)
         [pool.putRequest(req) for req in requests]
         # pool.wait()
-    except Exception, e:
-        print e.message
+    except Exception as e:
+        print (e.message)
 
 
 def sendBakMessage(client, msg):
     try:
-        print msg.topic + " " + ":" + str(msg.payload)
+        print (msg.topic + " " + ":" + str(msg.payload))
         topic = msg.topic.encode("utf-8")
         y = '/MCloud_product_001/DeviceConnectionStatusAck'
         x = topic.split("/")[1]
         message = msg.payload.encode("utf-8")
         sen = x + y
-        print sen
         mid = json.loads(message)['mid']
-        print 'mid: '+mid
         mes = 'this is ok test'
         # client.publish(sen, "{'mid':'" + mid + "','version':'1.0.0','pld':{'deviceIds':"
         #                                        "[{'deviceId':'MWSS','result':0}]}}")
         client.publish(sen, mes,2)
-        print sen + " >> 成功"
-    except Exception, e:
-        print e.message
+        print (sen + " >> 成功")
+    except Exception as e:
+        print (e.message)
 
 client = mqtt.Client()
 client.on_connect = on_connect

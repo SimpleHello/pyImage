@@ -11,7 +11,7 @@ def saveHistory(queryTime):
     addCodeExistThs(noDay)
     codes = getCode()
     if codes is False:
-        print '当前:', times, '无数据产生'
+        print ('当前:', times, '无数据产生')
         return
     for code in codes:
         try:
@@ -28,11 +28,11 @@ def saveHistory(queryTime):
             mysql._insert("Share_ths_ai_his",
                           ['code', 'starts', 'ends', 'ranges', 'day'],
                           [code, "#" + str(st), "#" + str(en), "#" + str(amm), "#" + day])
-            print 'code:', code, '保存成功'
+            print ('code:', code, '保存成功')
 
-        except BaseException, e:
-            print e.message
-            print times, code, '出现异常 !!!'
+        except BaseException as e:
+            print (e.message)
+            print (times, code, '出现异常 !!!')
 
 
 def getCode():
@@ -55,7 +55,7 @@ def delCodeExist(code, queryTime):
 
 def getByTime(code):
     data = ts.get_k_data(code, start='2018-03-09', end='2018-03-09')
-    print data
-    print '------------------------'
+    print (data)
+    print ('------------------------')
     num = data.index[0]
-    print data.loc[num].values[2]
+    print (data.loc[num].values[2])
