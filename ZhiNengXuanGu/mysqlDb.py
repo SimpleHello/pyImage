@@ -14,7 +14,6 @@ import Config
 import sys
 from MySQLdb.cursors import DictCursor
 from DBUtils.PooledDB import PooledDB
-reload(sys)
 sys.setdefaultencoding('utf-8')
 
 """
@@ -34,9 +33,9 @@ class Mysql(object):
         try:
             self._conn = Mysql.__getConn()
             self._cursor = self._conn.cursor()
-        except Exception, e:
+        except Exception as e:
             error = 'Connect failed! ERROR (%s): %s' % (e.args[0], e.args[1])
-            print error
+            print(error)
             sys.exit()
 
     @staticmethod
@@ -63,9 +62,9 @@ class Mysql(object):
             self._cursor.execute(sql)
             records = self._cursor.fetchall()
             return records
-        except MySQLdb.Error, e:
+        except MySQLdb.Error as e:
             error = 'MySQL execute failed! ERROR (%s): %s' % (e.args[0], e.args[1])
-            print error
+            print(error)
 
     # 针对更新,删除,事务等操作失败时回滚
     def _exeCuteCommit(self, sql='', arg=None):
@@ -75,10 +74,10 @@ class Mysql(object):
             else:
                 self._cursor.execute(sql, arg)
             self._conn.commit()
-        except MySQLdb.Error, e:
+        except MySQLdb.Error as e:
             self._conn.rollback()
             error = 'MySQL execute failed! ERROR (%s): %s' % (e.args[0], e.args[1])
-            print error
+            print(error)
             # sys.exit()
 
     # 创建表
@@ -95,7 +94,7 @@ class Mysql(object):
         sql = sql + sql_mid
         sql = sql + constraint
         sql = sql + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
-        print '_createTable:' + sql
+        print('_createTable:' + sql)
         self._exeCuteCommit(sql)
 
     def insertOne(self, sql, value=None):
@@ -117,11 +116,11 @@ class Mysql(object):
         # values_sql = ['%s' for v in attrs]
         attrs_sql = '(' + ','.join(attrs) + ')'
         value_str = self._transferContent(value)
-        print value_str
+        print(value_str)
         values_sql = ' values(' + value_str + ')'
         sql = 'insert into %s' % table
         sql = sql + attrs_sql + values_sql
-        print '_insert:' + sql
+        print('_insert:' + sql)
         self._exeCuteCommit(sql)
 
     def _insertDic(self, table, attrs):
@@ -134,7 +133,7 @@ class Mysql(object):
         values_sql = ' values(' + value_str + ')'
         sql = 'insert into %s' % table
         sql = sql + attrs_sql + values_sql
-        print '_insert:' + sql
+        print('_insert:' + sql)
         self._exeCuteCommit(sql)
 
     # 将list转为字符串
@@ -169,15 +168,15 @@ class Mysql(object):
         values_sql = ' values(' + ','.join(values_sql) + ')'
         sql = 'insert into %s' % table
         sql = sql + attrs_sql + values_sql
-        print '_insertMany:' + sql
+        print('_insertMany:' + sql)
         try:
             for i in range(0, len(values), 20000):
                 self._cursor.executemany(sql, values[i:i + 20000])
                 self._conn.commit()
-        except MySQLdb.Error, e:
+        except MySQLdb.Error as e:
             self._conn.rollback()
             error = '_insertMany executemany failed! ERROR (%s): %s' % (e.args[0], e.args[1])
-            print error
+            print(error)
             sys.exit()
 
     def insertMany(self, sql, values=None):
@@ -193,10 +192,10 @@ class Mysql(object):
             else:
                 count = self._cursor.execute(sql, values)
             self._conn.commit()
-        except MySQLdb.Error, e:
+        except MySQLdb.Error as e:
             self._conn.rollback()
             error = 'MySQL execute failed! ERROR (%s): %s' % (e.args[0], e.args[1])
-            print error
+            print(error)
             sys.exit()
         return count
 
@@ -214,7 +213,7 @@ class Mysql(object):
         consql = consql + ' 1=1 '
         sql = 'select * from %s where ' % table
         sql = sql + consql + order
-        print '_select:' + sql
+        print('_select:' + sql)
         return self._exeCute(sql)
 
     def __getInsertId(self):

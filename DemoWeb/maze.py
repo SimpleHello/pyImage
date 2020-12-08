@@ -2,8 +2,8 @@ import sys
 import matplotlib.pyplot as plt
 from random import randint
 
-WIDTH  = 60
-HEIGHT = 40
+WIDTH  = 120
+HEIGHT = 80
 sys.setrecursionlimit(WIDTH * HEIGHT)
 
 def initVisitedList():
@@ -85,7 +85,7 @@ def DFS(X, Y, edgeList, visited):
 
 if __name__ == "__main__":
 	plt.axis('off')
-	for i in range(20):
+	for i in range(2):
 		plt.figure(figsize=(9, 7))
 		edgeList = initEdgeList()
 		visited = initVisitedList()
@@ -96,6 +96,6 @@ if __name__ == "__main__":
 			drawLine(edge[0], edge[1], edge[2], edge[3])
 		plt.xticks([])
 		plt.yticks([])
-		plt.savefig("000/maze"+str(i)+".jpg", bbox_inches="tight",dpi=300)
+		plt.savefig("000/mazeHigh"+str(i)+".jpg", bbox_inches="tight",dpi=300)
 		# plt.show()
 		plt.close()

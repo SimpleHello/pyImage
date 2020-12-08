@@ -7,8 +7,8 @@ def saveData():
         code = '600734'
         data = ts.get_realtime_quotes(code)
         xi = data[['code', 'name', 'price', 'a1_v', 'time']]
-        print xi
-        print '----------------------'
-        print xi.loc[0].values[0]
-    except BaseException, e:
-        print e.message
+        print( xi)
+        print('----------------------')
+        print(xi.loc[0].values[0])
+    except BaseException as e:
+        print( e.message)
