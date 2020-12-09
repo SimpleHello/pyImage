@@ -3,7 +3,7 @@ import time
 
 
 def Main_Def(par1, par2, par3):
-    print "par1 = %s, par2 = %s, par3 = %s" % (par1, par2, par3)
+    print("par1 = %s, par2 = %s, par3 = %s" % (par1, par2, par3))
 
 
 if __name__ == '__main__':

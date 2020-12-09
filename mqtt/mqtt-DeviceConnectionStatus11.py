@@ -31,25 +31,25 @@ def sendBakMessage(client, msg):
     pld = json.loads(message)['pld']['deviceIds'][0]['deviceId']
     client.publish(sen, "{'mid':'" + mid + "','version':'1.0.0','pld':{'deviceIds':[{'deviceId':'"+pld+"','result':1}]}}",2)
     #client.publish(senr, "{'mid':'" + mid + "','version':'1.0.0','pld':{'deviceId':'"+pld+"','array':[{'ts':'"+t+"','datas':['36924,"+year+"','36923,"+month+"','36922,"+day+"','36921,"+hour+"','36920,"+minute+"','36919,"+second+"','36887,1']}]}}",2)
-    print sen + " >> 成功"
+    print (sen + " >> 成功")
 
 
 def on_message(client, userdata, msg):
-    print 'start...'
+    print('start...')
     n = 2
     m = 4
     try:
         t = threading.Thread(target=sendBakMessage, arg=(client,msg))
         t.start()
         t.join()
-    except BaseException, e:
-        print e.message
-    print 'gone'
+    except BaseException as e:
+        print(e.message)
+    print('gone')
 
 
 def do(n):
-    print n
-    print '-----------'
+    print (n)
+    print ('-----------')
 
 client = mqtt.Client()
 client.on_connect = on_connect

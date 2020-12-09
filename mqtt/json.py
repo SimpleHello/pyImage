@@ -9,7 +9,6 @@
 #python 3解决中文轮码
 #with open('send_dev_datas.xml', 'w',encoding='utf-8') as f:
 import sys
-reload(sys)
 sys.setdefaultencoding("UTF-8")
 import xlrd
 data = xlrd.open_workbook('alarmModel2.xlsx')
