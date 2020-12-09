@@ -1,6 +1,5 @@
 # coding=UTF-8
-from apscheduler.schedulers.blocking import BlockingScheduler
-import share
+import StockSelectionDao
 import logging
 import datetime
 
@@ -10,7 +9,7 @@ logging.basicConfig()
 def startIndex():
     now_time = datetime.datetime.now()
     queryTime = now_time + datetime.timedelta(days=-1)
-    share.saveHistory(queryTime)
+    StockSelectionDao.saveHistory(queryTime)
 
 
 # job = BlockingScheduler()

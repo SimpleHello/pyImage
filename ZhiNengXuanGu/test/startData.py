@@ -1,6 +1,7 @@
 # coding=UTF-8
 import logging
-import shareData
+
+from test import shareData
 
 logging.basicConfig()
 

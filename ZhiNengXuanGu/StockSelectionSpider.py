@@ -1,11 +1,15 @@
 # _*_ coding=UTF-8 _*_
-import urllib.request
 import datetime
-import mysqlDb
-import Config
+import urllib.request
+
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
+import Config
+from tool import mysqlDb
+
+
+# 同花顺智能选股网站爬取
 
 def getAiIndex():
     ctime = datetime.datetime.now()

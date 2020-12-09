@@ -1,6 +1,7 @@
 # _*_ coding:utf-8 _*_
 import tushare as ts
-import mysqlDb
+
+from tool import mysqlDb
 
 mysql = mysqlDb.Mysql()
 

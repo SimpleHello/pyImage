@@ -1,13 +1,13 @@
 # coding=UTF-8
 from apscheduler.schedulers.blocking import BlockingScheduler
-import aiIndex
+import StockSelectionSpider
 import logging
 
 logging.basicConfig()
 
 
 def startIndex():
-    aiIndex.getAiIndex()
+    StockSelectionSpider.getAiIndex()
 
 
 job = BlockingScheduler()

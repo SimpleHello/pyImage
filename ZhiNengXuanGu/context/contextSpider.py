@@ -1,10 +1,14 @@
 # _*_ coding=UTF-8 _*_
 #基于 python3 完成
+# 时事一点通网站 爬取实时新闻
 import urllib.request
 import requests
 from bs4 import BeautifulSoup
 import codecs
 
+
+def demoSimple():
+    print ('> 开始解析 123123123:')
 
 def getAiIndex(ctime):
     url = 'https://www.ssydt.com/article/'+ctime
@@ -45,3 +49,4 @@ def analyzeDate(soup):
 def writetxt(path, content):
     with codecs.open(path, 'a', encoding='utf-8')as f:
         f.write(content + "\n")
+
