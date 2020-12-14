@@ -1,7 +1,7 @@
 import sys
 import matplotlib.pyplot as plt
 from random import randint
-
+# 生成迷宫
 WIDTH  = 120
 HEIGHT = 80
 sys.setrecursionlimit(WIDTH * HEIGHT)

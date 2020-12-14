@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+# 生成图片
 if __name__ == "__main__":
     caida = [1] * 10
     cernet = [2] * 10
