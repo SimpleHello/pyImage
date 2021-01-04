@@ -11,10 +11,8 @@ Created on 2020年11月11日
 
 import MySQLdb
 from config import Config
-import sys
 from MySQLdb.cursors import DictCursor
 from DBUtils.PooledDB import PooledDB
-sys.setdefaultencoding('utf-8')
 
 """
 Config是一些数据库的配置文件
