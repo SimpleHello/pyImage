@@ -1,7 +1,8 @@
 # coding=UTF-8
-import StockSelectionDao
-import logging
 import datetime
+import logging
+
+from share import StockSelectionDao
 
 logging.basicConfig()
 

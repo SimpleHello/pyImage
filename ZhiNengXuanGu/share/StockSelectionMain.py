@@ -1,7 +1,9 @@
 # coding=UTF-8
-from apscheduler.schedulers.blocking import BlockingScheduler
-import StockSelectionSpider
 import logging
+
+from apscheduler.schedulers.blocking import BlockingScheduler
+
+from share import StockSelectionSpider
 
 logging.basicConfig()
 

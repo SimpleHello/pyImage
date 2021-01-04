@@ -10,7 +10,7 @@ Created on 2020年11月11日
 """
 
 import MySQLdb
-import Config
+from config import Config
 import sys
 from MySQLdb.cursors import DictCursor
 from DBUtils.PooledDB import PooledDB
