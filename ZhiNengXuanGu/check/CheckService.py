@@ -1,5 +1,6 @@
 # _*_ coding=UTF-8 _*_
 import hashlib
+import logging
 from apscheduler.schedulers.blocking import BlockingScheduler
 import requests, time, re, rsa, base64
 import datetime
@@ -9,10 +10,17 @@ s = requests.Session()
 username = "15868474510"
 password = "admin!@34"
 
+logging.basicConfig(level=logging.DEBUG,#控制台打印的日志级别
+                    filename='new.log',
+                    filemode='a',##模式，有w和a，w就是写模式，每次都会重新写日志，覆盖之前的日志
+                    #a是追加模式，默认如果不写的话，就是追加模式
+                    format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s'
+                    #日志格式
+                    )
 
 def main():
     ctime = datetime.datetime.now()
-    print(ctime, '> 开始签到任务........')
+    logging.info(ctime, '> 开始签到任务........')
     login(username, password)
     rand = str(round(time.time() * 1000))
     surl = f'https://api.cloud.189.cn/mkt/userSign.action?rand={rand}&clientType=TELEANDROID&version=8.6.3&model=SM-G930K'
@@ -27,9 +35,9 @@ def main():
     response = s.get(surl, headers=headers)
     netdiskBonus = response.json()['netdiskBonus']
     if (response.json()['isSign'] == "false"):
-        print(f"未签到，签到获得{netdiskBonus}M空间")
+        logging.info(f"未签到，签到获得{netdiskBonus}M空间")
     else:
-        print(f"已经签到过了，签到获得{netdiskBonus}M空间")
+        logging.info(f"已经签到过了，签到获得{netdiskBonus}M空间")
     headers = {
         'User-Agent': 'Mozilla/5.0 (Linux; Android 5.1.1; SM-G930K Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.136 Mobile Safari/537.36 Ecloud/8.6.3 Android/22 clientId/355325117317828 clientModel/SM-G930K imsi/460071114317824 clientChannelId/qq proVersion/1.0.6',
         "Referer": "https://m.cloud.189.cn/zhuanti/2016/sign/index.jsp?albumBackupOpened=1",
@@ -38,16 +46,16 @@ def main():
     }
     response = s.get(url, headers=headers)
     if ("errorCode" in response.text):
-        print(response.text)
+        logging.info(response.text)
     else:
         description = response.json()['description']
-        print(f"抽奖获得{description}")
+        logging.info(f"抽奖获得{description}")
     response = s.get(url2, headers=headers)
     if ("errorCode" in response.text):
-        print(response.text)
+        logging.info(response.text)
     else:
         description = response.json()['description']
-        print(f"抽奖获得{description}")
+        logging.info(f"抽奖获得{description}")
 
 
 BI_RM = list("0123456789abcdefghijklmnopqrstuvwxyz")
@@ -130,9 +138,9 @@ def login(username, password):
     }
     r = s.post(url, data=data, headers=headers, timeout=5)
     if (r.json()['result'] == 0):
-        print(r.json()['msg'])
+        logging.info(r.json()['msg'])
     else:
-        print(r.json()['msg'])
+        logging.info(r.json()['msg'])
     redirect_url = r.json()['toUrl']
     r = s.get(redirect_url)
     return s
@@ -143,5 +151,5 @@ def startCheck():
 if __name__ == '__main__':
     job = BlockingScheduler()
     # day_of_week 0-6 对应 mon(0),tue(1),wed(2),thu(3),fri(4),sat(5),sun(6)
-    job.add_job(startCheck, 'cron', minute='20', hour='8,22', day_of_week='0-6')
+    job.add_job(startCheck, 'cron', minute='39', hour='8,22', day_of_week='0-6')
     job.start()
