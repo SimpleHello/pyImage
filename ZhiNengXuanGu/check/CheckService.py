@@ -10,7 +10,7 @@ s = requests.Session()
 username = "15868474510"
 password = "admin!@34"
 
-logging.basicConfig(level=logging.DEBUG,#控制台打印的日志级别
+logging.basicConfig(level=logging.INFO,#控制台打印的日志级别
                     filename='new.log',
                     filemode='a',##模式，有w和a，w就是写模式，每次都会重新写日志，覆盖之前的日志
                     #a是追加模式，默认如果不写的话，就是追加模式
@@ -19,8 +19,7 @@ logging.basicConfig(level=logging.DEBUG,#控制台打印的日志级别
                     )
 
 def main():
-    ctime = datetime.datetime.now()
-    logging.info(ctime, '> 开始签到任务........')
+    logging.info('> 开始签到任务........')
     login(username, password)
     rand = str(round(time.time() * 1000))
     surl = f'https://api.cloud.189.cn/mkt/userSign.action?rand={rand}&clientType=TELEANDROID&version=8.6.3&model=SM-G930K'
@@ -149,7 +148,8 @@ def startCheck():
     main()
 
 if __name__ == '__main__':
-    job = BlockingScheduler()
-    # day_of_week 0-6 对应 mon(0),tue(1),wed(2),thu(3),fri(4),sat(5),sun(6)
-    job.add_job(startCheck, 'cron', minute='39', hour='8,22', day_of_week='0-6')
-    job.start()
+    # job = BlockingScheduler()
+    # # day_of_week 0-6 对应 mon(0),tue(1),wed(2),thu(3),fri(4),sat(5),sun(6)
+    # job.add_job(startCheck, 'cron', minute='39', hour='8,22', day_of_week='0-6')
+    # job.start()
+    main()
