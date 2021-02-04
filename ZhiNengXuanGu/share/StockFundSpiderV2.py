@@ -1,16 +1,12 @@
 # _*_ coding=UTF-8 _*_
 import datetime
 import urllib.request
-import requests
+import time
 from bs4 import BeautifulSoup
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait  # 等待一个元素加载完成
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium import webdriver
 import psycopg2
-import time
+from concurrent.futures import ThreadPoolExecutor
 
 chrome_options = Options()
 chrome_options.add_argument('--headless')  # 设置无页面模式
@@ -51,6 +47,10 @@ def getFundIndex(name, ctime, symbol):
     print(datetime.datetime.now(), "获取数据完成-进行解析工作")
     analyzeDate(name, symbol, ctime, response)
     print(datetime.datetime.now(), '获取实时数据 操作完成')
+
+
+def getFundIndexGateway(param):
+    getFundIndex(param[0], param[1], param[2])
 
 
 def analyzeDate(name, symbol, ctime, content):
@@ -103,18 +103,14 @@ def analyzeDate(name, symbol, ctime, content):
 
 def getBaseList():
     cur = conn.cursor()
-    cur.execute("SELECT * from stock_basic where market<> '科创板' ")
-    rows = cur.fetchall()
-    # for row in rows:
-    #     print(row[3], " ", row[2])
-    print("Operation done successfully")
-    return rows
+    cur.execute("SELECT * from stock_basic where market<> '科创板' and  id > 97 and id<=105")
+    return cur.fetchall()
 
 
 def saveList(name1, symbol1, ctime1, organ1, organNum1, stackNum1, stackMoney1, rateTotalStack1, rateCirculateStack1):
     cur = conn.cursor()
     cur.execute(
-        "INSERT INTO stock_fund_history(name,symbol ,ctime ,organ,organNum,stackNum,stackMoney,rateTotalStack,rateCirculateStack)"
+        "INSERT INTO stock_fund_history2(name,symbol ,ctime ,organ,organNum,stackNum,stackMoney,rateTotalStack,rateCirculateStack)"
         "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
         , (name1, symbol1, ctime1, organ1, organNum1, stackNum1, stackMoney1, rateTotalStack1, rateCirculateStack1))
     print("save successfully", name1, symbol1, ctime1, organ1, organNum1, stackNum1, stackMoney1, rateTotalStack1,
@@ -123,7 +119,12 @@ def saveList(name1, symbol1, ctime1, organ1, organNum1, stackNum1, stackMoney1, 
 
 if __name__ == '__main__':
     rows = getBaseList()
+    pool = ThreadPoolExecutor(max_workers=20)
+    params = []
     for row in rows:
+        time.sleep(2)
         print(datetime.datetime.now(), row[3], " ", row[2])
-        getFundIndex(row[3], '2020-09-30', row[2])
+        param = (row[3], '2020-09-30', row[2])
+        future1 = pool.submit(getFundIndexGateway,param)
+
     # getFundIndex('平安银行', '2020-09-30', '000001')
